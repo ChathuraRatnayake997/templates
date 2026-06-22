@@ -1,0 +1,43 @@
+{
+  "type": "publications",
+  "id": "publications",
+  "enabled": true,
+  "navigation": {
+    "show": true,
+    "label": "Notes"
+  },
+  "data": {
+    "heading_label": "03 / RECENT LITERATURE",
+    "heading": "My Notes",
+    "items": [
+      {
+        "title": "How to Look Like You're Working",
+        "journal": "My Blog, 2023",
+        "links": [
+          { "label": "Read", "url": "#" }
+        ]
+      },
+      {
+        "title": "The Kettle takes too long",
+        "journal": "Kitchen Thoughts, 2022",
+        "links": [
+          { "label": "Read", "url": "#" }
+        ]
+      },
+      {
+        "title": "Finding a Good Playlist",
+        "journal": "Music Notes, 2021",
+        "links": [
+          { "label": "Read", "url": "#" }
+        ]
+      },
+      {
+        "title": "I found my spoon",
+        "journal": "Daily Wins, 2020",
+        "links": [
+          { "label": "Read", "url": "#" }
+        ]
+      }
+    ]
+  }
+}

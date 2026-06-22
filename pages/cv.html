@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Dr. Morgan Tide</title>
+  <link rel="icon" href="../assets/images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}body{background:#0f1111;color:#e5e7eb;font-family:'Hanken Grotesk',sans-serif;display:flex;flex-direction:column;height:100vh}.toolbar{display:flex;justify-content:space-between;align-items:center;padding:12px 24px;background:#171a1a;border-bottom:1px solid rgba(255,255,255,0.08);flex-shrink:0}.toolbar span{font-weight:600;font-size:0.85rem}.toolbar-actions{display:flex;gap:12px}.btn{color:#94bbf7;text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.16);padding:8px 18px;border-radius:4px;cursor:pointer;background:transparent;font-family:inherit;transition:all 0.2s;min-height:48px;display:flex;align-items:center}.btn:hover{background:rgba(148,187,247,0.1);border-color:rgba(148,187,247,0.3)}#viewer{flex:1;overflow-y:auto;max-width:850px;width:100%;margin:0 auto;padding:24px 16px;scrollbar-width:none}#viewer::-webkit-scrollbar{display:none}.page-wrapper{margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.3);border-radius:4px;overflow:hidden}.page-wrapper canvas{display:block;width:100%;height:auto}#loading{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#0f1111;z-index:10;font-size:1rem;letter-spacing:0.05em;color:#9ca3af}#loading.hidden{display:none}#error{display:none;text-align:center;padding:80px 24px;color:#9ca3af}#error h2{font-size:1.5rem;margin-bottom:16px;color:#e5e7eb}#error a{margin-top:24px;display:inline-block}
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span>Curriculum Vitae</span>
+    <div class="toolbar-actions">
+      <a href="../" class="btn">&larr; Back</a>
+      <button id="downloadBtn" class="btn">Download PDF</button>
+    </div>
+  </div>
+  <div id="loading">Loading PDF...</div>
+  <div id="error">
+    <h2>Could not load PDF</h2>
+    <p>The document may not be available yet.</p>
+    <a href="../" class="btn">Back to Home</a>
+  </div>
+  <div id="viewer"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"><\/script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+    var params = new URLSearchParams(location.search);
+    var url = params.get('url') || '../assets/cv.pdf';
+    var loading = document.getElementById('loading');
+    var viewer = document.getElementById('viewer');
+    var errorDiv = document.getElementById('error');
+    var downloadBtn = document.getElementById('downloadBtn');
+    downloadBtn.addEventListener('click', function() {
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = url.split('/').pop();
+      a.click();
+    });
+    pdfjsLib.getDocument(url).promise.then(function(pdf) {
+      loading.classList.add('hidden');
+      for (var i = 1; i <= pdf.numPages; i++) {
+        (function(pageNum) {
+          pdf.getPage(pageNum).then(function(page) {
+            var viewport = page.getViewport({ scale: 1.5 });
+            var wrapper = document.createElement('div');
+            wrapper.className = 'page-wrapper';
+            var canvas = document.createElement('canvas');
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            wrapper.appendChild(canvas);
+            viewer.appendChild(wrapper);
+            page.render({ canvasContext: canvas.getContext('2d'), viewport: viewport });
+          });
+        })(i);
+      }
+    }).catch(function() {
+      loading.classList.add('hidden');
+      errorDiv.style.display = 'block';
+    });
+  <\/script>
+</body>
+</html>
