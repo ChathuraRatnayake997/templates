@@ -1,0 +1,93 @@
+{
+  "type": "publications",
+  "id": "publications",
+  "enabled": true,
+  "navigation": {
+    "show": true,
+    "label": "Notes"
+  },
+  "data": {
+    "heading_label": "Readings & Notes",
+    "heading": ["Selected", "Publications"],
+    "focus": "A curated collection of studies on productivity, thermodynamics of waiting, and the perfect playlist\u2014because science should also be enjoyable.",
+    "all_link": "https://scholar.google.com/",
+
+
+    "featured": {
+      "image": "assets/images/10.jpg",
+      "alt": "Coffee and notes on a desk",
+      "badge": "Journal of Procrastination Studies 2023",
+      "tags": ["featured", "popular"],
+      "title": "How to Look Like You're Working: Techniques for Appearing Productive",
+      "authors": "Overdrive, C. & Percolator, J. (2023)",
+      "paragraphs": [
+        "I keep things pretty simple. I make some coffee, try to get some work done, and usually get distracted by a cool song or a random video online. My main goal right now is to find my favorite green coffee cup. Other than that, I'm just taking things one day at a time and trying to stay relaxed.",
+        "\nI keep things pretty simple. I make some coffee, try to get some work done, and usually get distracted by a cool song or a random video online. My main goal right now is to find my favorite green coffee cup. Other than that, I'm just taking things one day at a time and trying to stay relaxed.",
+        "I keep things pretty simple. I make some coffee, try to get some work done, and usually get distracted by a cool song or a random video online. My main goal right now is to find my favorite green coffee cup. Other than that, I'm just taking things one day at a time and trying to stay relaxed.",
+        "I keep things pretty simple. I make some coffee, try to get some work done, and usually get distracted by a cool song or a random video online. My main goal right now is to find my favorite green coffee cup. Other than that, I'm just taking things one day at a time and trying to stay relaxed.\n\n"
+      ],
+      "links": [
+        {
+          "icon": "download",
+          "label": "Full Research Paper",
+          "info": "PDF \u2022 8.2 MB \u2022 English",
+          "url": "#",
+          "iconBtns": [
+            { "icon": "open_in_new", "url": "#" },
+            { "icon": "bookmark", "url": "#" }
+          ]
+        },
+        {
+          "icon": "code",
+          "label": "Supplementary Code",
+          "info": "GitHub \u2022 Python \u2022 MIT License",
+          "url": "https://www.google.com"
+        },
+        {
+          "icon": "visibility",
+          "label": "Online Viewer",
+          "info": "Interactive Demo",
+          "url": "https://www.google.com"
+        }
+      ]
+    },
+    "items": [
+      {
+        "title": "The Kettle Takes Too Long: A Thermodynamic Lament",
+        "authors": "Overdrive, C. (2022)",
+        "summary": "An empirical investigation into the subjective perception of time during water heating, and its correlation with morning caffeine craving intensity.",
+        "journal": "International Symposium on Kitchen Efficiency, 2022",
+        "tags": ["article", "published"],
+        "image": "",
+        "links": [
+          { "label": "View", "icon": "visibility", "url": "https://doi.org/10.1234/iske.2022.042" },
+          { "label": "PDF", "icon": "download", "url": "#" }
+        ]
+      },
+      {
+        "title": "Finding a Good Playlist: Algorithmic Approaches to Mood Matching",
+        "authors": "Overdrive, C. & Beats, L. (2021)",
+        "summary": "A review of recommendation algorithms for matching musical ambiance to coffee brewing methods and time of day, revealing a strong tempo-caffeine correlation.",
+        "journal": "Journal of Audio Comfort, 2021",
+        "tags": ["article"],
+        "image": "",
+        "links": [
+          { "label": "View", "icon": "rib_cage", "url": "https://doi.org/10.1234/jac.2021.008" },
+          { "label": "Data", "icon": "planet", "url": "#" }
+        ]
+      },
+      {
+        "title": "Neural Synchronization in Caffeine-Rich Environments",
+        "authors": "Overdrive, C. & Percolator, J. (2020)",
+        "summary": "This study examines collective neuro-signatures of coffee drinkers under deadline pressure, revealing how synchronized caffeine intake correlates with breakthrough ideas in open-plan offices.",
+        "journal": "Journal of Caffeine Neuroscience, 2020",
+        "tags": ["article", "featured"],
+        "image": "assets/images/7.jpg",
+        "links": [
+          { "label": "View", "icon": "visibility", "url": "#" },
+          { "label": "Code", "icon": "code", "url": "#" }
+        ]
+      }
+    ]
+  }
+}

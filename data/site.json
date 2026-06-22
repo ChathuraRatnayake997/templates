@@ -1,0 +1,43 @@
+{
+  "name": "Caffeine Overdrive",
+  "title": "Caffeine Overdrive | Just Hanging Out",
+  "favicon": "assets/images/favicon.ico",
+  "google_analytics_id": "",
+
+  "cv": {
+    "path": "/assets/my-hobbies.pdf",
+    "viewer": "pages/cv.html",
+    "external_url": "https://dashboard.emailjs.com/sign-up",
+    "mode": "external",
+    "labels": {
+      "view": "My Playlist",
+      "download": "Get Coffee Map",
+      "external": "My Web Link"
+    }
+  },
+
+  "sections": [
+    "hero.json",
+    "about.json",
+    "education.json",
+    "publications.json",
+    "projects.json",
+    "blog.json",
+    "contact.json"
+  ],
+
+  "footer": {
+    "name": "Caffeine Overdrive",
+    "tagline": "Just hanging out.",
+    "links": [
+      {
+        "label": "My Favorite Coffee",
+        "url": "#"
+      },
+      {
+        "label": "Nap Tips",
+        "url": "#"
+      }
+    ]
+  }
+}
