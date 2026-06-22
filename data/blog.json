@@ -1,0 +1,19 @@
+{
+  "type": "blog",
+  "id": "blog",
+  "enabled": true,
+  "navigation": {
+    "show": true,
+    "label": "Field Notes"
+  },
+  "data": {
+    "heading_label": "05 / DISPATCHES",
+    "heading": "Field Notes",
+    "items": [
+      {
+        "meta": "OCT 12, 2025 // COFFEE LOG",
+        "text": "Tried a new Ethiopian roast today. Notes of blueberry and dark chocolate. Definitely going on the favorites list."
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "about",
+  "id": "about",
+  "enabled": true,
+  "navigation": {
+    "show": true,
+    "label": "About"
+  },
+  "data": {
+    "heading_label": "01 / ORIGIN",
+    "heading": "A Bit About Me",
+    "paragraphs": [
+      "I keep things pretty simple. I make some coffee, try to get some work done, and usually get distracted by a cool song or a random video online. My main goal right now is to find my favorite green coffee cup. Other than that, I'm just taking things one day at a time and trying to stay relaxed."
+    ]
+  }
+}
